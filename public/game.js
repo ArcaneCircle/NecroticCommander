@@ -11,6 +11,7 @@
 'use strict';
 
 window.highscores.init("Necrotic Commander");
+let objectDefaultSize = vec2(1);
 
 // popup errors if there are any (help diagnose issues on mobile devices)
 // onerror = (...parameters)=> alert(parameters);
