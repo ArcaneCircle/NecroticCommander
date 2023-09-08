@@ -10,6 +10,8 @@
 
 'use strict';
 
+window.highscores.init("Necrotic Commander");
+
 // popup errors if there are any (help diagnose issues on mobile devices)
 // onerror = (...parameters)=> alert(parameters);
 
@@ -284,6 +286,7 @@ function gameRenderPost() {
 
     if (necromancer.health === 0 && endTime <= 0) {
         drawRect(vec2(cameraPos.x, cameraPos.y + 10), vec2(40, 25), new Color(0, 0, 0), 0, true);
+        window.highscores.setScore(enemyWave);
         font.drawText(`You survived\nto wave ${enemyWave}!\n\nClick to\nplay again`, vec2(cameraPos.x, cameraPos.y + 18), 0.4, true);
     }
 }
