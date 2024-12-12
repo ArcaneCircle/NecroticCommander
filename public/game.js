@@ -10,7 +10,6 @@
 
 'use strict';
 
-window.highscores.init("Necrotic Commander");
 let objectDefaultSize = vec2(1);
 
 // popup errors if there are any (help diagnose issues on mobile devices)
@@ -794,4 +793,8 @@ class CertainDeathMode extends Button {
 
 /// ////////////////////////////////////////////////////////////////////////////
 // Startup LittleJS Engine
-engineInit(gameInit, gameUpdate, gameUpdatePost, gameRender, gameRenderPost, 'tiles.png');
+window.addEventListener("load", () => {
+  window.highscores.init().then(() => {
+    engineInit(gameInit, gameUpdate, gameUpdatePost, gameRender, gameRenderPost, 'tiles.png');
+  });
+});
