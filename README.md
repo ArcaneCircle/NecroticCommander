@@ -6,7 +6,7 @@ A little tower defense. This is a WebXDC port of https://github.com/d-jeffery/Ne
 
 ### Installing Dependencies
 
-After cloning this repo, install dependecies:
+After cloning this repo, install dependencies:
 
 ```
 pnpm i
@@ -17,9 +17,7 @@ pnpm i
 To test your work in your browser (with hot reloading!) while developing:
 
 ```
-pnpm dev-mini
-# Alternatively to test in a more advanced WebXDC emulator:
-pnpm dev
+pnpm start
 ```
 
 ### Building
